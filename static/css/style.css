@@ -49,6 +49,7 @@ nav{
     min-height: 8vh;
     background-color: #f9dada6e;
     transition: 0.5s ease;
+    z-index: 1;
 }
 
 nav.sticky{
@@ -135,9 +136,16 @@ nav.sticky{
     font-family: 'Poppins', sans-serif;
     display: flex;
     justify-content: space-between;
-    padding-bottom: 7em;
+    padding-bottom: 15em;
+    transform: translateY(50%);
+    opacity: 0;
+    transition: all 300ms ease;
 }
 
+.why.active{
+    opacity: 1;
+    transform: translateY(0);
+}
 .why img{
     width: 35vw;
     height: 37vh;
@@ -242,6 +250,15 @@ nav.sticky{
     justify-content: space-between;
     padding: 5em 0;
 }
+.feature1, .feature2{
+    transform: translateY(20%);
+    opacity: 0;
+    transition: all 300ms ease;
+}
+.feature1.active, .feature2.active{
+    opacity: 1;
+    transform: translateY(0);
+}
 
 .feature1 .left h2, .feature2 .right h2{
     font-family: 'Poppins', sans-serif;
@@ -292,8 +309,13 @@ nav.sticky{
     margin: auto;
     font-family: 'Poppins', sans-serif;
     padding-bottom: 5em;
+    opacity: 0;
+    transition: opacity 500ms ease;
 }
 
+.testimonials.active{
+    opacity: 1;
+}
 .testimonial{
     width: 23%;
     border: 1px solid grey;
@@ -446,8 +468,15 @@ nav.sticky{
     border: 1px solid black;
     text-align: center;
     font-family: 'Poppins', sans-serif;
+    transform: translateY(20%);
+    opacity: 0;
+    transition: all 500ms ease;
 }
 
+.contact-form.active{
+    transform: translateY(0%);
+    opacity: 1;
+}
 .contact-form h1{
     font-size: 4em;
     margin-bottom: 1em;
